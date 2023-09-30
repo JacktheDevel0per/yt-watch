@@ -4,6 +4,7 @@ import { invoke } from "@tauri-apps/api/tauri";
 import "./App.css";
 
 import SearchBar from "./components/SearchBar";
+import Video from "./components/Video";
 
 function App() {
   const [greetMsg, setGreetMsg] = useState("");
@@ -17,6 +18,7 @@ function App() {
   return (
     <div className="container">
       <SearchBar></SearchBar>
+      <Video video_id="z86ToVPx42Y"></Video>
     </div>
   );
 }
