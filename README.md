@@ -1,7 +1,8 @@
-# Tauri + React
+# YT Watch
 
-This template should help get you started developing with Tauri and React in Vite.
+Watch YouTube in a native and portable tauri + react app.
 
-## Recommended IDE Setup
+# Warning
 
-- [VS Code](https://code.visualstudio.com/) + [Tauri](https://marketplace.visualstudio.com/items?itemName=tauri-apps.tauri-vscode) + [rust-analyzer](https://marketplace.visualstudio.com/items?itemName=rust-lang.rust-analyzer)
+- This is designed for windows.
+- I don't reccomend using this.
