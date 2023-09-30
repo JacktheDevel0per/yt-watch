@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="page.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>YT Watch</title>
+    <script type="module" src="/main.js" defer></script>
+
+    <link
+      href="//code.ionicframework.com/nightly/css/ionic.css"
+      rel="stylesheet"
+    />
+    <script src="//code.ionicframework.com/nightly/js/ionic.bundle.js"></script>
+    <script src="//code.ionicframework.com/nightly/js/angular/angular-resource.js"></script>
+  </head>
+
+  <body>
+    <div class="container FlickrCtrl">
+      <ion-header-bar class="bar-dark"> </ion-header-bar>
+
+      <div id="search-bar">
+        <div class="item item-input-inset">
+          <label class="item-input-wrapper" id="search-input">
+            <i class="icon ion-search placeholder-icon"></i>
+            <form class="row" id="greet-form">
+              <input
+                type="text"
+                placeholder="Search"
+                ng-model="query"
+                ng-change="search()"
+              />
+            </form>
+          </label>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
