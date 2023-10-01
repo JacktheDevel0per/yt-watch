@@ -1,12 +1,22 @@
-import Iframe from "react-iframe";
+// import Iframe from "react-iframe";
 
-function Video(props) {
+import { useSearchParams, redirect } from "react-router-dom";
+
+function Video() {
+  //We don't actually set it here, user should not be able to either, but it should work if they do.
+  const [searchParams, setSearchParams] = useSearchParams();
+
+  if (!searchParams.has("v")) {
+    console.log("Search Param not found, showing error page");
+    return redirect("/");
+  }
+
   const video_src =
-    "https://www.youtube.com/embed/" + props.video_id + "?rel=0&autoplay=1";
+    "https://www.youtube.com/embed/" + searchParams.has("v")
+      ? searchParams.get("v")
+      : "z86ToVPx42Y" + "?rel=0&autoplay=1"; //Default To Primagen video for now, this will be changed later hopefully.
   return (
     <>
-      <h1>{props.video_id}</h1>
-
       <div className="yt-player-div">
         <iframe
           className="yt-player-iframe"

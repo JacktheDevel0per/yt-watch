@@ -21,3 +21,11 @@
   padding-top: 45px;
   padding-bottom: 20px;
 }
+
+.item-input-wrapper {
+  cursor: text;
+}
+
+.form-search-input {
+  width: 100%;
+}

@@ -1,10 +1,36 @@
 import { useState } from "react";
-import reactLogo from "./assets/react.svg";
 import { invoke } from "@tauri-apps/api/tauri";
+
+import {
+  MemoryRouter,
+  NavLink,
+  Route,
+  Routes,
+  createBrowserRouter,
+  createRoutesFromElements,
+} from "react-router-dom";
+
+import {
+  AppShell,
+  Text,
+  Burger,
+  ActionIcon,
+  Group,
+  AppShellNavbar,
+} from "@mantine/core";
+
+import { useMantineTheme } from "@mantine/core";
+
+import { MantineProvider, createTheme } from "@mantine/core";
+import { SunIcon, MoonIcon } from "@radix-ui/react-icons";
+
 import "./App.css";
 
 import SearchBar from "./components/SearchBar";
 import Video from "./components/Video";
+import VideoPlayerPage from "./pages/VideoPlayerPage";
+import VideoSearchPage from "./pages/VideoSearchPage";
+import LandingPage from "./pages/LandingPage";
 
 function App() {
   const [greetMsg, setGreetMsg] = useState("");
@@ -17,8 +43,16 @@ function App() {
 
   return (
     <div className="container">
-      <SearchBar></SearchBar>
-      <Video video_id="z86ToVPx42Y"></Video>
+      <MantineProvider>
+        <MemoryRouter>
+          <SearchBar />
+          <Routes>
+            <Route path="/" element={<LandingPage />} />
+            <Route path="watch" element={<VideoPlayerPage />} />
+            <Route path="search" element={<VideoSearchPage />} />
+          </Routes>
+        </MemoryRouter>
+      </MantineProvider>
     </div>
   );
 }

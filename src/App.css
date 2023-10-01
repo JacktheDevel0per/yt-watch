@@ -28,3 +28,15 @@
   left: 0;
   /* background: #fff; */
 }
+
+.d-flex {
+  display: flex;
+}
+
+.mt-search {
+  padding-top: 61px;
+}
+
+.d-block {
+  display: block;
+}

@@ -4,21 +4,30 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "tdev": "tauri dev",
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
     "tauri": "tauri"
   },
   "dependencies": {
+    "@mantine/core": "^7.1.0",
+    "@mantine/hooks": "^7.1.0",
+    "@radix-ui/react-icons": "^1.3.0",
     "@tauri-apps/api": "^1.5.0",
     "jotai": "^2.4.3",
+    "radix-icons": "^1.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-iframe": "^1.8.5"
+    "react-iframe": "^1.8.5",
+    "react-router-dom": "6"
   },
   "devDependencies": {
+    "@tauri-apps/cli": "^1.5.0",
     "@vitejs/plugin-react": "^4.0.3",
-    "vite": "^4.4.4",
-    "@tauri-apps/cli": "^1.5.0"
+    "postcss": "^8.4.31",
+    "postcss-preset-mantine": "^1.7.0",
+    "postcss-simple-vars": "^7.0.1",
+    "vite": "^4.4.4"
   }
 }
