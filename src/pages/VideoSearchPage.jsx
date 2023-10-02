@@ -6,6 +6,10 @@ function VideoSearchPage() {
 
   const navagate = useNavigate();
 
+  const GetThumbnail = (videoId) => {
+    return "https://i.ytimg.com/vi_webp/" + video_id + "/maxresdefault.webp";
+  };
+
   const searchField = searchParams.has("search")
     ? searchParams.get("search")
     : "";
