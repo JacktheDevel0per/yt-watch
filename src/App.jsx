@@ -8,6 +8,7 @@ import {
   Routes,
   createBrowserRouter,
   createRoutesFromElements,
+  RouterProvider,
 } from "react-router-dom";
 
 import {
@@ -31,6 +32,17 @@ import Video from "./components/Video";
 import VideoPlayerPage from "./pages/VideoPlayerPage";
 import VideoSearchPage from "./pages/VideoSearchPage";
 import LandingPage from "./pages/LandingPage";
+import TitleBar from "./components/title/NewTitleBar";
+
+const router = createBrowserRouter(
+  createRoutesFromElements(
+    <>
+      <Route index element={<LandingPage />}></Route>
+      <Route path="watch" element={<VideoPlayerPage />} />
+      <Route path="search" element={<VideoSearchPage />} />
+    </>
+  )
+);
 
 function App() {
   const [greetMsg, setGreetMsg] = useState("");
@@ -42,18 +54,17 @@ function App() {
   }
 
   return (
-    <div className="container">
+    <>
+      {/* This TitleBar will be removed and replaced with a new one that is inside the router, and includes the search as one of its groups,
+    
+    Unlike the search bar, the title bar is basically no strings attached. It can be in any scope and anywhere.
+    
+    */}
+      {/* <TitleBar /> */}
       <MantineProvider>
-        <MemoryRouter>
-          <SearchBar />
-          <Routes>
-            <Route path="/" element={<LandingPage />} />
-            <Route path="watch" element={<VideoPlayerPage />} />
-            <Route path="search" element={<VideoSearchPage />} />
-          </Routes>
-        </MemoryRouter>
+        <RouterProvider router={router} />
       </MantineProvider>
-    </div>
+    </>
   );
 }
 

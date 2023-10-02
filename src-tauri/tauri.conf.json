@@ -21,7 +21,14 @@
         "setFullscreen": true,
         "setMaximizable": true,
         "maximize": true,
-        "setFocus": true
+        "setFocus": true,
+        "close": true,
+        "hide": true,
+        "show": true,
+        "minimize": true,
+        "unmaximize": true,
+        "unminimize": true,
+        "startDragging": true
       }
     },
     "bundle": {
@@ -45,6 +52,7 @@
     },
     "windows": [
       {
+        "decorations": true,
         "fullscreen": false,
         "resizable": true,
         "title": "yt-watch",

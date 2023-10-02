@@ -1,8 +1,12 @@
+import { Link } from "react-router-dom";
+import TitleBar from "../components/title/NewTitleBar";
+import { Outlet } from "react-router-dom";
+
 function LandingPage() {
   return (
     <>
-      <h1>YT Watch</h1>
-      <p>`YouTube Recomended` is not supported</p>
+      <TitleBar />
+      <Outlet />
     </>
   );
 }

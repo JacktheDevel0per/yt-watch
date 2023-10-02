@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { useSearchParams, useNavigate } from "react-router-dom";
+import { useSearchParams, useNavigate, Link } from "react-router-dom";
 
 function VideoSearchPage() {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -26,6 +26,8 @@ function VideoSearchPage() {
         <h1>Video Search Page </h1>
         {searchField}
       </div>
+      <Link to="/watch?v=QI22Dry_QDk"> VIDEO TEST</Link>
+      <Link to="/watch?v=wYdnJPYFTIE"> VIDEO TEST 2</Link>
     </>
   );
 }

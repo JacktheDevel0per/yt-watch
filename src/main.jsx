@@ -19,23 +19,16 @@ import Video from "./components/Video";
 import VideoPlayerPage from "./pages/VideoPlayerPage";
 import VideoSearchPage from "./pages/VideoSearchPage";
 import LandingPage from "./pages/LandingPage";
+import { Title } from "@mantine/core";
+import TitleBar from "./components/TitleBar";
 
-const router = createBrowserRouter(
-  createRoutesFromElements(
-    <>
-      <Route path="/" element={<SearchBar />}>
-        <Route path="watch" element={<VideoPlayerPage />} />
-        <Route path="search" element={<VideoSearchPage />} />
-      </Route>
-    </>
-  )
-);
+import "./globals.css";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <>
-    <RouterProvider router={router}>
-      <SearchBar />
-    </RouterProvider>
+    <React.StrictMode>
+      <App />
+    </React.StrictMode>
   </>
 
   // <React.StrictMode>

@@ -1,31 +1,31 @@
 #search-input {
-  text-align: center;
+    text-align: center;
 }
 
 #search-bar {
-  background: none;
-  position: absolute;
-  width: 100%;
-  /* top: 44px; */
-  height: 40px;
-  z-index: 3;
+    background: none;
+    position: absolute;
+    width: 100%;
+    /* top: 44px; */
+    height: 40px;
+    z-index: 3;
 }
 
 #search-bar .item {
-  /* background: none; */
-  border: none;
+    /* background: none; */
+    border: none;
 }
 
 #content {
-  top: 44px;
-  padding-top: 45px;
-  padding-bottom: 20px;
+    top: 44px;
+    padding-top: 45px;
+    padding-bottom: 20px;
 }
 
 .item-input-wrapper {
-  cursor: text;
+    cursor: text;
 }
 
 .form-search-input {
-  width: 100%;
+    width: 100%;
 }

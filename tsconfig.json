@@ -1,0 +1,11 @@
+{
+  "files": ["src/dummy.ts"],
+  "compilerOptions": {
+    "target": "es5",
+    "module": "commonjs"
+  },
+  "baseUrl": ".",
+  "paths": {
+    "@/*": ["src/*"]
+  }
+}

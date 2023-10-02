@@ -38,13 +38,13 @@ function SearchBar() {
 
   return (
     <>
-      <div className="container FlickrCtrl">
+      <div className="">
         {/* <ion-header-bar className="bar-dark"> </ion-header-bar> */}
 
         <div id="search-bar">
           <div className="item item-input-inset">
             <label className="item-input-wrapper" id="search-input">
-              <i className="icon ion-search placeholder-icon"></i>
+              <i className="icon ion-search placeholder-icon" />
               <Form
                 redirect="/search"
                 className="row"
