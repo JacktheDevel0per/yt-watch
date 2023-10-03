@@ -6,6 +6,7 @@ function LandingPage() {
   return (
     <>
       <TitleBar />
+      <div>TEST</div>
       <Outlet />
     </>
   );

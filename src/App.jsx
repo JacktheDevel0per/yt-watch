@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { invoke } from "@tauri-apps/api/tauri";
+import { ThemeProvider } from "@/components/theme-provider";
 
 import {
   MemoryRouter,
@@ -11,21 +12,11 @@ import {
   RouterProvider,
 } from "react-router-dom";
 
-import {
-  AppShell,
-  Text,
-  Burger,
-  ActionIcon,
-  Group,
-  AppShellNavbar,
-} from "@mantine/core";
-
-import { useMantineTheme } from "@mantine/core";
-
-import { MantineProvider, createTheme } from "@mantine/core";
 import { SunIcon, MoonIcon } from "@radix-ui/react-icons";
 
 import "./App.css";
+
+import "./globals.css";
 
 import SearchBar from "./components/SearchBar";
 import Video from "./components/Video";
@@ -61,9 +52,9 @@ function App() {
     
     */}
       {/* <TitleBar /> */}
-      <MantineProvider>
+      <ThemeProvider defaultTheme="light" storageKey="vite-ui-theme">
         <RouterProvider router={router} />
-      </MantineProvider>
+      </ThemeProvider>
     </>
   );
 }
