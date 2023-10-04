@@ -11,6 +11,8 @@ import { Minus, Plus, Square, X } from "lucide-react";
 import TitleButtonWidget from "./TitleButtonWidget";
 import ThemeSelectorWidget from "./ThemeSelectorWidget";
 
+import WindowMoveWidget from "./WindowMoveWidget";
+
 function TitleBar() {
   return (
     <>
@@ -22,6 +24,8 @@ function TitleBar() {
         </div>
 
         <ThemeSelectorWidget />
+
+        <WindowMoveWidget />
 
         <TitleButtonWidget
           image="https://api.iconify.design/mdi:window-minimize.svg"
