@@ -38,35 +38,33 @@ function SearchBar() {
 
   return (
     <>
-      <div className="">
-        {/* <ion-header-bar className="bar-dark"> </ion-header-bar> */}
+      {/* <ion-header-bar className="bar-dark"> </ion-header-bar> */}
 
-        <div id="search-bar">
-          <div className="item item-input-inset">
-            <label className="item-input-wrapper" id="search-input">
-              <i className="icon ion-search placeholder-icon" />
-              <Form
-                redirect="/search"
-                className="row"
-                id="greet-form"
-                onSubmit={handleSubmit}
+      <div id="search-bar">
+        <div className="item item-input-inset">
+          <label className="item-input-wrapper" id="search-input">
+            <i className="icon ion-search placeholder-icon" />
+            <Form
+              redirect="/search"
+              className="row"
+              id="greet-form"
+              onSubmit={handleSubmit}
+              autoComplete="off"
+            >
+              <input
+                name="search"
+                type="text"
+                placeholder="Search YouTube"
+                defaultValue={searchField}
                 autoComplete="off"
-              >
-                <input
-                  name="search"
-                  type="text"
-                  placeholder="Search YouTube"
-                  defaultValue={searchField}
-                  autoComplete="off"
-                  className="form-search-input"
-                />
-              </Form>
-            </label>
-          </div>
+                className="form-search-input"
+              />
+            </Form>
+          </label>
         </div>
-        <div className="clearfix mt-search">
-          <Outlet />
-        </div>
+      </div>
+      <div className="clearfix mt-search">
+        <Outlet />
       </div>
     </>
   );

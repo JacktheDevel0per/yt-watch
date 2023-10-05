@@ -1,26 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App";
-// import "./styles.css";
 
-import {
-  MemoryRouter,
-  NavLink,
-  Route,
-  Routes,
-  createBrowserRouter,
-  createRoutesFromElements,
-  RouterProvider,
-} from "react-router-dom";
-
-import SearchBar from "./components/SearchBar";
-import Video from "./components/Video";
-import VideoPlayerPage from "./pages/VideoPlayerPage";
-import VideoSearchPage from "./pages/VideoSearchPage";
-import LandingPage from "./pages/LandingPage";
-import TitleBar from "./components/TitleBar";
-
-// import "./globals.css";
+//Currently this will disable right click stuff. Might be removed later...
+document.addEventListener("contextmenu", (event) => event.preventDefault());
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <>
@@ -28,8 +11,4 @@ ReactDOM.createRoot(document.getElementById("root")).render(
       <App />
     </React.StrictMode>
   </>
-
-  // <React.StrictMode>
-  //   <App />
-  // </React.StrictMode>
 );

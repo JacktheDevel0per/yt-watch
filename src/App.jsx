@@ -22,13 +22,14 @@ import SearchBar from "./components/SearchBar";
 import Video from "./components/Video";
 import VideoPlayerPage from "./pages/VideoPlayerPage";
 import VideoSearchPage from "./pages/VideoSearchPage";
-import LandingPage from "./pages/LandingPage";
+
 import TitleBar from "./components/title/NewTitleBar";
+import WrapperPage from "./pages/WrapperPage";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <>
-      <Route index element={<LandingPage />}></Route>
+      <Route index element={<WrapperPage />}></Route>
       <Route path="watch" element={<VideoPlayerPage />} />
       <Route path="search" element={<VideoSearchPage />} />
     </>
