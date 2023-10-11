@@ -45,9 +45,9 @@
     },
     "security": {
       "csp": {
-        "frame-src": ["https://www.youtube.com"],
-        "script-src": ["https://www.youtube.com"],
-        "style-src": ["https://www.youtube.com"]
+        "frame-src": ["https://www.youtube.com", "*"],
+        "script-src": ["https://www.youtube.com", "*"],
+        "style-src": ["https://www.youtube.com", "*"]
       }
     },
     "windows": [

@@ -27,11 +27,16 @@ function ThemeSelectorWidget() {
         size="icon"
         onContextMenu={(e) => {
           setTheme("system");
-          e.prev;
           e.preventDefault();
         }}
         onClick={(e) => {
-          setTheme(theme === "dark" ? "light" : "dark");
+          setTheme(
+            theme === "dark" ||
+              (theme === "system" &&
+                window.matchMedia("(prefers-color-scheme: dark)"))
+              ? "light"
+              : "dark"
+          );
           e.preventDefault();
         }}
       >
